@@ -10,6 +10,6 @@ router.route('/:id').get(protect, getTicket).delete(protect, deleteTicket).put(p
 
 // Reroute to note router
 const noteRouter = require('./noteRoutes')
-router.use(':/ticketId/notes', noteRouter)
+router.use('/:ticketId/notes', noteRouter)
 
 module.exports = router
